@@ -1,0 +1,15 @@
+﻿@model Decimal?
+<select>
+    <option value="0">Please Select</option>
+    @for (int i = 1; i <= 24; i++)
+    {
+        if (Model.HasValue && ((int)Model.Value) == i)
+        {
+            <option value="@i" selected="selected">@i</option>
+        }
+        else
+        {
+            <option value="@i">@i</option>
+        }
+    }
+</select>
